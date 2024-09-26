@@ -1,0 +1,925 @@
+
+> contrib-demo-2453@1.0.0 start:file-access-error
+> ts-node --require ./src/otel.ts ./src/file-access-error.ts
+
+gracefully handled error Error: ENOENT: no such file or directory, open 'non-existent-file.txt'
+    at Object.openSync (node:fs:596:3)
+    at Object.patchedFunction [as openSync] (/home/marc/otel-js/contrib-demo-2453/node_modules/@opentelemetry/instrumentation-fs/src/instrumentation.ts:171:25)
+    at readFileSync (node:fs:464:35)
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at AsyncLocalStorageContextManager.with (/home/marc/otel-js/contrib-demo-2453/node_modules/@opentelemetry/context-async-hooks/src/AsyncLocalStorageContextManager.ts:40:36)
+    at ContextAPI.with (/home/marc/otel-js/contrib-demo-2453/node_modules/@opentelemetry/api/src/api/context.ts:77:42)
+    at patchedFunction (/home/marc/otel-js/contrib-demo-2453/node_modules/@opentelemetry/instrumentation-fs/src/instrumentation.ts:192:37)
+    at Object.<anonymous> (/home/marc/otel-js/contrib-demo-2453/src/file-access-error.ts:4:17)
+    at Module._compile (node:internal/modules/cjs/loader:1364:14)
+    at Module.m._compile (/home/marc/otel-js/contrib-demo-2453/node_modules/ts-node/src/index.ts:1618:23) {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: 'non-existent-file.txt'
+}
+done
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: 'bbee94a8ab1bdaa791496903c1e645f7',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs existsSync',
+  id: 'aca9d2f24375b111',
+  kind: 0,
+  timestamp: 1727351913623000,
+  duration: 187.718,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: '2a5cb070c856af94b4ea44ad4f094467',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs readFileSync',
+  id: '3a50acd52857bfa7',
+  kind: 0,
+  timestamp: 1727351913624000,
+  duration: 174.536,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: '27221ecf8d89d2e159df9de6c79e5227',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs existsSync',
+  id: '9adf24c2da7b3c1f',
+  kind: 0,
+  timestamp: 1727351913624000,
+  duration: 38.296,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: 'aa31ab479e621a676e0726b4499ff573',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs readFileSync',
+  id: '0e5fcd200780019c',
+  kind: 0,
+  timestamp: 1727351913624000,
+  duration: 249.277,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: '545a86a50d92f0039b3b6585dc001a95',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs existsSync',
+  id: '5ed8c4f25809da9e',
+  kind: 0,
+  timestamp: 1727351913640000,
+  duration: 56.138,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: 'd05249e30feb85b9eeab8462f22de226',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs existsSync',
+  id: '22804acb0304b1fb',
+  kind: 0,
+  timestamp: 1727351913640000,
+  duration: 35.195,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: '78bbd7fe4fe267765aeedadb67d2b2e5',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs readFileSync',
+  id: '0badee2e8c2c2aeb',
+  kind: 0,
+  timestamp: 1727351913640000,
+  duration: 81.998,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: 'c5832fbbba839a229571cdd40ee1ea42',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs existsSync',
+  id: '7648fa966e7e7eff',
+  kind: 0,
+  timestamp: 1727351913640000,
+  duration: 121.464,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: 'c6849439f542232829cc4a349248c29d',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs readFileSync',
+  id: '7ded6dcca7e5fba9',
+  kind: 0,
+  timestamp: 1727351913641000,
+  duration: 78.522,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: '24239cd31e673bd09333081bd75584b4',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs existsSync',
+  id: '4207fff30fda93bf',
+  kind: 0,
+  timestamp: 1727351913641000,
+  duration: 35.872,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: '585e9ec3b8d8cd65ca542c5571b1c006',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs readFileSync',
+  id: '6bc5f05f520cd5dd',
+  kind: 0,
+  timestamp: 1727351913642000,
+  duration: 128.864,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: 'ac9b48d0ecafc9451ab348b57b90091b',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs existsSync',
+  id: '2622b13be2946b6a',
+  kind: 0,
+  timestamp: 1727351913642000,
+  duration: 91.241,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: 'f79ab266cf4ee3884c7a9ae9782d45f6',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs readFileSync',
+  id: '381722b2fcbc177e',
+  kind: 0,
+  timestamp: 1727351913642000,
+  duration: 52.57,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: 'cc57f70756f5b6b754ed1d9c83aabf03',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs existsSync',
+  id: '8ef6cd75c13eac6f',
+  kind: 0,
+  timestamp: 1727351913642000,
+  duration: 29.696,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: '3490b4830aae50a00953a46e70ee3ce6',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs readFileSync',
+  id: '1b499d986e7ca7ed',
+  kind: 0,
+  timestamp: 1727351913642000,
+  duration: 49.198,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: 'e8e7d4bf180c27ab5c492b5946a25a05',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs existsSync',
+  id: '924f27d72531d58f',
+  kind: 0,
+  timestamp: 1727351913643000,
+  duration: 20.982,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: 'c869f995cafc059651ad8aa625334b7c',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs readFileSync',
+  id: 'cb02ada3c98d1088',
+  kind: 0,
+  timestamp: 1727351913643000,
+  duration: 44.537,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: '6274fa48f4690cb6f5561cc6a2c19347',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs existsSync',
+  id: '8b6dcbffcd27f4c6',
+  kind: 0,
+  timestamp: 1727351913643000,
+  duration: 31.955,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: '328958f34bc11cdd1272bad6d5ab3f18',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs existsSync',
+  id: '5ca2ac1617aa43d3',
+  kind: 0,
+  timestamp: 1727351913643000,
+  duration: 20.527,
+  attributes: {},
+  status: { code: 0 },
+  events: [],
+  links: []
+}
+{
+  resource: {
+    attributes: {
+      'service.name': 'unknown_service:node',
+      'telemetry.sdk.language': 'nodejs',
+      'telemetry.sdk.name': 'opentelemetry',
+      'telemetry.sdk.version': '1.26.0',
+      'process.pid': 8909,
+      'process.executable.name': 'node',
+      'process.executable.path': '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+      'process.command_args': [
+        '/home/marc/.nvm/versions/node/v18.20.4/bin/node',
+        '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+        '--require',
+        './src/otel.ts',
+        './src/file-access-error.ts'
+      ],
+      'process.runtime.version': '18.20.4',
+      'process.runtime.name': 'nodejs',
+      'process.runtime.description': 'Node.js',
+      'process.command': '/home/marc/otel-js/contrib-demo-2453/node_modules/.bin/ts-node',
+      'process.owner': 'marc',
+      'host.name': 'DT-DQH06D3',
+      'host.arch': 'amd64'
+    }
+  },
+  instrumentationScope: {
+    name: '@opentelemetry/instrumentation-fs',
+    version: '0.15.0',
+    schemaUrl: undefined
+  },
+  traceId: '615e74a1247a1c92b2d0cfef674ee1e3',
+  parentId: undefined,
+  traceState: undefined,
+  name: 'fs readFileSync',
+  id: '3dd4de000c69bacf',
+  kind: 0,
+  timestamp: 1727351913621000,
+  duration: 22347.811,
+  attributes: {},
+  status: {
+    message: "ENOENT: no such file or directory, open 'non-existent-file.txt'",
+    code: 2
+  },
+  events: [
+    {
+      name: 'exception',
+      attributes: {
+        'exception.type': 'ENOENT',
+        'exception.message': "ENOENT: no such file or directory, open 'non-existent-file.txt'",
+        'exception.stacktrace': "Error: ENOENT: no such file or directory, open 'non-existent-file.txt'\n" +
+          '    at Object.openSync (node:fs:596:3)\n' +
+          '    at Object.patchedFunction [as openSync] (/home/marc/otel-js/contrib-demo-2453/node_modules/@opentelemetry/instrumentation-fs/src/instrumentation.ts:171:25)\n' +
+          '    at readFileSync (node:fs:464:35)\n' +
+          '    at AsyncLocalStorage.run (node:async_hooks:338:14)\n' +
+          '    at AsyncLocalStorageContextManager.with (/home/marc/otel-js/contrib-demo-2453/node_modules/@opentelemetry/context-async-hooks/src/AsyncLocalStorageContextManager.ts:40:36)\n' +
+          '    at ContextAPI.with (/home/marc/otel-js/contrib-demo-2453/node_modules/@opentelemetry/api/src/api/context.ts:77:42)\n' +
+          '    at patchedFunction (/home/marc/otel-js/contrib-demo-2453/node_modules/@opentelemetry/instrumentation-fs/src/instrumentation.ts:192:37)\n' +
+          '    at Object.<anonymous> (/home/marc/otel-js/contrib-demo-2453/src/file-access-error.ts:4:17)\n' +
+          '    at Module._compile (node:internal/modules/cjs/loader:1364:14)\n' +
+          '    at Module.m._compile (/home/marc/otel-js/contrib-demo-2453/node_modules/ts-node/src/index.ts:1618:23)'
+      },
+      time: [ 1727351913, 643299209 ],
+      droppedAttributesCount: 0
+    }
+  ],
+  links: []
+}
